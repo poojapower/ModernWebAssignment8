@@ -36,6 +36,7 @@ function refreshTable() {
   updateEmployeeCount();
 }
 
+
 function updateEmployeeCount() {
   $("employeeCount").innerHTML = employee_list.length;
 }
@@ -68,7 +69,7 @@ function validateSubmit() {
   } else {
     $("errTitle").innerHTML = "";
   }
-  
+
 
   if ($("extension").value.length < 1) {
     $("errExtension").innerHTML = "Enter extension";
