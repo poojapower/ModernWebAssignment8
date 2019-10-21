@@ -68,6 +68,7 @@ function validateSubmit() {
   } else {
     $("errTitle").innerHTML = "";
   }
+  
 
   if ($("extension").value.length < 1) {
     $("errExtension").innerHTML = "Enter extension";
