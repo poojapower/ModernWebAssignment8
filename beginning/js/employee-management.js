@@ -27,7 +27,7 @@ function refreshTable() {
     button.type = "button";
     button.value = "Delete";
     button.addEventListener('click', function () {
-      deleteItem(element);
+      deleteItem(event);
     });
     deleteCell.appendChild(button);
     deleteCell.className = "deleteCell";
@@ -41,7 +41,8 @@ function updateEmployeeCount() {
 }
 
 function deleteItem(e) {
-  var index = employee_list.indexOf(e);
+  //Getting row index of the delete button parent tr
+  var index = e.target.closest("tr").rowIndex-1;
   employee_list.splice(index, 1);
   refreshTable();
 }
